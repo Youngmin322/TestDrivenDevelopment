@@ -5,4 +5,7 @@
 //  Created by 조영민 on 4/14/25.
 //
 
-import Foundation
+
+public func fizzBuzz(_ number: Int) -> String {
+    return ""
+}
