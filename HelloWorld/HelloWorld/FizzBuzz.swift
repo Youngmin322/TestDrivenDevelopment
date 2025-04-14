@@ -18,3 +18,7 @@ public func fizzBuzz(_ number: Int) -> String {
     }
 }
 
+func asyncSum(a: Int, b: Int, complete: @escaping (Int) -> Void) async {
+    try? await Task.sleep(nanoseconds: 200_000_000)
+    complete(a + b)
+}
