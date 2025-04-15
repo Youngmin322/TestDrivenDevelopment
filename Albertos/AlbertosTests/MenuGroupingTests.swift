@@ -1,5 +1,5 @@
 //
-//  MenyGroupingTests.swift
+//  MenuGroupingTests.swift
 //  AlbertosTests
 //
 //  Created by 조영민 on 4/15/25.
@@ -7,29 +7,27 @@
 
 import XCTest
 
-final class MenyGroupingTests: XCTestCase {
+@testable import Albertos
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+final class MenuGroupingTests: XCTestCase {
+    
+    // 한 카테고리당 섹션이 하나씩 있어야 한다.
+    func testMenuWithManyCategoriesReturnsOneSectionPerCategory() {
+        
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    // 카테고리가 하나인 경우 섹션도 하나여야 한다.
+    func testMenuWithOneCategoryReturnsOneSection() {}
+    
+    // 메뉴가 비어있으면 섹션도 비어있어야 한다.
+    func testEmptyMenuReturnsEmptySections() {
+        // Arrange: 빈 메뉴
+        let menu = [MenuItem]()
+        
+        // Act
+        let sections = groupMenuByCategory(menu)
+        
+        // Assert
+        XCTAssertTrue(sections.isEmpty)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
