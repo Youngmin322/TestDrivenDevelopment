@@ -37,7 +37,7 @@ final class MenuGroupingTests: XCTestCase {
             // Assert
             XCTAssertEqual(section.items.count, 2)
             XCTAssertEqual(section.items.first?.name, "name")
-            XCTAssertEqual(section.items.last?.name, "othername")
+            XCTAssertEqual(section.items.last?.name, "other name")
         } catch {
             XCTFail("Failed to unwrap section: \(error)")
         }
