@@ -17,7 +17,7 @@ final class MenuGroupingTests: XCTestCase {
             .fixture(category: "drinks", name: "a drink"),
             .fixture(category: "pastas", name: "a pasta"),
             .fixture(category: "pastas", name: "another pasta"),
-            .fixture(category: "desserts", name: "a dessert")
+            .fixture(category: "desserts", name: "a dessert"),
         ].shuffled()
         
         let sections = groupMenuByCategory(menu)
@@ -33,7 +33,7 @@ final class MenuGroupingTests: XCTestCase {
         // Arrange
         let menu: [MenuItem] = [
             .fixture(category: "pastas", name: "name"),
-            .fixture(category: "pastas", name: "other name")
+            .fixture(category: "pastas", name: "other name"),
         ]
         
         // Act

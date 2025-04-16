@@ -13,9 +13,12 @@ extension MenuSection {
         items: [MenuItem] = [
             .fixture(category: "category"),
             .fixture(category: "category"),
-            .fixture(category: "category")
+            .fixture(category: "category"),
         ]
     ) -> MenuSection {
-        MenuSection(category: category, items: items)
+        MenuSection(
+            category: category,
+            items: items
+        )
     }
 }
