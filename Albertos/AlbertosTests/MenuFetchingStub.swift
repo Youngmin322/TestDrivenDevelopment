@@ -5,12 +5,21 @@
 //  Created by 조영민 on 4/16/25.
 //
 
-import Testing
+@testable import Albertos
 
-struct MenuFetchingStub {
+import Foundation
+import Combine
 
-    @Test func <#test function name#>() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+class MenuFetchingStub: MenuFetching {
+    let result: Result<[MenuItem], Error>
+    
+    init(returning result: Result<[MenuItem], Error>) {
+        self.result = result
     }
-
+    
+    func fetchMenu() -> AnyPublisher<[MenuItem], Error> {
+        return Future { $0(self.result) }
+            .delay(for: 0.1, scheduler: RunLoop.main)
+            .eraseToAnyPublisher()
+    }
 }
