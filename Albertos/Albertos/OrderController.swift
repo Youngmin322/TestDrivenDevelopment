@@ -5,7 +5,6 @@
 //  Created by 조영민 on 4/17/25.
 //
 
-
 import Foundation
 import Combine
 
@@ -21,8 +20,8 @@ class OrderController: ObservableObject {
     }
     
     func addToOrder(_ item: MenuItem) {
-            order.items.append(item)
-        }
+        order.items.append(item)
+    }
     
     func removeFromOrder(_ item: MenuItem) {
         order.items.removeAll { $0.id == item.id }
