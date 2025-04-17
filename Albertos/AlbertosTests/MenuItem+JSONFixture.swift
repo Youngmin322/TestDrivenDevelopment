@@ -14,13 +14,15 @@ extension MenuItem {
         spicy: Bool = false,
         price: Double = 0.0
     ) -> String {
-     """
-     {
-       "category": "\(category)",
-       "name": "\(name)",
-       "spicy": \(spicy),
-       "price": \(price)
-     }
-     """
+    """
+    {
+      "category": {
+        "name": "\(category)"
+      },
+      "name": "\(name)",
+      "spicy": \(spicy),
+      "price": \(price)
+    }
+    """
     }
 }

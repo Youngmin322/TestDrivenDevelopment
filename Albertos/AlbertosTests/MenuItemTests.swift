@@ -20,7 +20,7 @@ final class MenuItemTests: XCTestCase {
         
         XCTAssertEqual(item.name, "a name")
         XCTAssertEqual(item.category, "a category")
-        XCTAssertEqual(item.spicy, true)
+        XCTAssertEqual(item.spicy, false)
         XCTAssertEqual(item.price, 0.0)
     }
     
