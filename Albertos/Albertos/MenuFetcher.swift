@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-@testable import Albertos
 
 class MenuFetcher: MenuFetching {
     let networkFetching: NetworkFetching
