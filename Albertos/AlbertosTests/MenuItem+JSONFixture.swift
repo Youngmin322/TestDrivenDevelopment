@@ -5,4 +5,22 @@
 //  Created by 조영민 on 4/17/25.
 //
 
-import Foundation
+@testable import Albertos
+
+extension MenuItem {
+    static func jsonFixture(
+        name: String = "name",
+        category: String = "category",
+        spicy: Bool = false,
+        price: Double = 0.0
+    ) -> String {
+     """
+     {
+       "category": "\(category)",
+       "name": "\(name)",
+       "spicy": \(spicy),
+       "price": \(price)
+     }
+     """
+    }
+}
