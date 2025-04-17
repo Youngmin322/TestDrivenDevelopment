@@ -5,7 +5,6 @@
 //  Created by 조영민 on 4/15/25.
 //
 
-
 @testable import Albertos
 
 extension MenuItem {
@@ -13,11 +12,13 @@ extension MenuItem {
         category: String = "category",
         name: String = "name",
         spicy: Bool = false,
+        price: Double = 0.0
     ) -> MenuItem {
         MenuItem(
             category: category,
             name: name,
-            spicy: spicy, price: 1.1
+            spicy: spicy,
+            price: price
         )
     }
 }

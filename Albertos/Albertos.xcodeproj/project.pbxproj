@@ -29,9 +29,34 @@
 		54D719DC2DADFC3B003B6ADD /* AlbertosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		543EF94D2DB0BDBC007298D0 /* Exceptions for "Albertos" folder in "Albertos" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MenuFetcher.swift,
+				NetworkFetching.swift,
+				"URLSession+NetworkFetching.swift",
+			);
+			target = 54D719A12DADFB49003B6ADD /* Albertos */;
+		};
+		543EF94E2DB0BDBC007298D0 /* Exceptions for "Albertos" folder in "AlbertosTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MenuFetcher.swift,
+				NetworkFetching.swift,
+				"URLSession+NetworkFetching.swift",
+			);
+			target = 54D719AE2DADFB4B003B6ADD /* AlbertosTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		54D719A42DADFB49003B6ADD /* Albertos */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				543EF94D2DB0BDBC007298D0 /* Exceptions for "Albertos" folder in "Albertos" target */,
+				543EF94E2DB0BDBC007298D0 /* Exceptions for "Albertos" folder in "AlbertosTests" target */,
+			);
 			path = Albertos;
 			sourceTree = "<group>";
 		};
